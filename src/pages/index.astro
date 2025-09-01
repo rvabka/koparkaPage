@@ -7,7 +7,7 @@ import "../styles/global.css";
 <Layout title="Firma Transportowo-Usługowa Piotr Szymocha">
   <section id="home" class="hero-section">
     <video class="hero-background" autoplay muted loop playsinline>
-      <source src="/koparkaPage/ex.webm" type="video/webm">
+      <source src="/ex.webm" type="video/webm">
     </video>
 
     <div class="overlay"></div>
@@ -44,10 +44,10 @@ import "../styles/global.css";
 
         <div class="image-grid">
           <div class="image-container main">
-            <img src="/koparkaPage/photo1.webp" alt="Koparka podczas pracy na placu budowy" />
+            <img src="/photo1.webp" alt="Koparka podczas pracy na placu budowy" />
           </div>
           <div class="image-container secondary">
-            <img src="/koparkaPage/photo2.webp" alt="Prace ziemne z koparką" />
+            <img src="/photo2.webp" alt="Prace ziemne z koparką" />
           </div>
         </div>
       </div>
@@ -110,6 +110,13 @@ import "../styles/global.css";
           <h3 class="service-title">Sprzedaż drewna</h3>
           <p class="service-description">Drewno opałowe i budowlane.</p>
         </div>
+      </div>
+
+      <div class="realizacje-cta">
+        <a href="/realizacje" class="cta-button primary">
+          <span>Zobacz nasze realizacje</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -183,7 +190,7 @@ import "../styles/global.css";
                 </div>
                 <div class="contact-text">
                   <h4>Telefon</h4>
-                  <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                   <p> <a href="tel:+48502163170">+48 502 163 170</a></p>
                 </div>
               </div>
 
@@ -193,7 +200,7 @@ import "../styles/global.css";
                 </div>
                 <div class="contact-text">
                   <h4>Email</h4>
-                  <p><a href="mailto:kontakt@firma.pl">kontakt@firma.pl</a></p>
+                  <p><a href="mailto:kontakt@praceziemne-kozienice-radom.pl">kontakt@praceziemne-kozienice-radom.pl</a></p>
                 </div>
               </div>
 
@@ -209,7 +216,7 @@ import "../styles/global.css";
             </div>
 
             <div class="contact-cta">
-              <a href="tel:+48123456789" class="cta-button primary">
+              <a href="tel:+48502163170" class="cta-button primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span>Zadzwoń teraz</span>
               </a>
@@ -237,7 +244,7 @@ import "../styles/global.css";
       <div class="footer-content">
         <div class="logo">
           <a href="#home">
-            <img class="company-logo" src="/koparkaPage/logo.webp" alt="Logo firmy" width="64" height="64">
+            <img class="company-logo" src="/logo.webp" alt="Logo firmy" width="64" height="64">
             <div class="company-content">
               <span class="company-name">Piotr Szymocha</span>
               <span class="company-type">Usługi Transportowe & Ziemne</span>
@@ -250,6 +257,8 @@ import "../styles/global.css";
           <ul>
             <li><a href="#home">Strona główna</a></li>
             <li><a href="#oferta">Oferta</a></li>
+            <!-- Added realizacje link to footer navigation -->
+            <li><a href="/realizacje">Realizacje</a></li>
             <li><a href="#sprzet">Nasz sprzęt</a></li>
             <li><a href="#dlaczego-my">Dlaczego my</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
@@ -259,7 +268,7 @@ import "../styles/global.css";
         <div class="footer-contact">
           <h4>Kontakt</h4>
           <p>Telefon: <a href="tel:+48502163170">+48 502 163 170</a></p>
-          <p>Email: kontakt@firma.pl</p>
+          <p>Email: <a href="mailto:kontakt@praceziemne-kozienice-radom.pl">kontakt@praceziemne-kozienice-radom.pl</a></p>
           <p>Adres: Augustów 89, 26-670 Augustów</p>
         </div>
       </div>
@@ -730,5 +739,35 @@ import "../styles/global.css";
       height: 350px;
     }
   }
-</style>
 
+  /* Added realizacje CTA styling */
+  .realizacje-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .realizacje-cta .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .realizacje-cta .cta-button.primary {
+    background-color: #ffc107;
+    color: #111111;
+    box-shadow: 0 4px 20px rgba(255, 193, 7, 0.3);
+  }
+
+  .realizacje-cta .cta-button.primary:hover {
+    background-color: #ffd54f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 193, 7, 0.4);
+  }
+</style>

@@ -11,6 +11,5 @@ export default defineConfig({
       return Buffer.from(code, 'utf8').toString();
     }
   },
-  site: 'https://rvabka.github.io',
-  base: 'koparkaPage'
+  site: 'https://rvabka.github.io'
 });

@@ -1,12 +1,11 @@
 ---
-
 ---
 
 <header class="site-header">
   <div class="header-container">
     <div class="logo">
-      <a href="#home">
-        <img class="company-logo" src="/koparkaPage/logo.webp" alt="Logo firmy" width="64" height="64"/>
+      <a href="/">
+        <img class="company-logo" src="/logo.webp" alt="Logo firmy" width="64" height="64"/>
         <div class="company-content">
           <span class="company-name">Piotr Szymocha</span>
           <span class="company-type">Usługi Transportowe & Ziemne</span>
@@ -16,11 +15,11 @@
 
     <nav class="main-nav">
       <ul class="nav-links">
-        <li><a href="#home" class="nav-link">Strona główna</a></li>
-        <li><a href="#oferta" class="nav-link">Oferta</a></li>
-        <li><a href="#dlaczego-my" class="nav-link">Dlaczego my</a></li>
-        <li><a href="#realizacje" class="nav-link">Realizacje</a></li>
-        <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+        <li><a href="/" class="nav-link">Strona główna</a></li>
+        <li><a href="/#oferta" class="nav-link">Oferta</a></li>
+        <li><a href="/#dlaczego-my" class="nav-link">Dlaczego my</a></li>
+        <li><a href="/realizacje" class="nav-link">Realizacje</a></li>
+        <li><a href="/#kontakt" class="nav-link">Kontakt</a></li>
       </ul>
     </nav>
 
@@ -34,25 +33,28 @@
   document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
 
-
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
-        e.preventDefault();
-
-
         const targetId = link.getAttribute('href');
-        if (!targetId || targetId === '#') return;
 
+        if (targetId === '/realizacje') {
+          return;
+        }
+
+        if (targetId === '/') {
+          window.location.href = '/';
+          return;
+        }
+
+        if (!targetId || targetId === '#') return;
 
         const targetElement = document.querySelector(targetId);
         if (!targetElement) return;
-
 
         targetElement.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
-
 
         const mobileMenu = document.querySelector('.main-nav');
         if (mobileMenu && mobileMenu.classList.contains('active')) {
@@ -65,7 +67,6 @@
       });
     });
 
-    // Mobile menu toggle
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     if (menuToggle) {
       menuToggle.addEventListener('click', () => {
@@ -84,7 +85,6 @@
 
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
 
         if (window.scrollY >= sectionTop - 100) {
           const id = section.getAttribute('id');
